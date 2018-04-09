@@ -1,0 +1,434 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Arduino_Nano-cache
+LIBS:texas_charge
+LIBS:texas_dcdc
+LIBS:18650
+LIBS:temp_sensors
+LIBS:node-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L bq25601 U2
+U 1 1 5AC273C0
+P 5400 3200
+F 0 "U2" H 5400 4000 60  0000 C CNN
+F 1 "bq25601" H 5400 3200 60  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-24-1EP_4x4mm_Pitch0.5mm" H 5400 3200 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq25601.pdf" H 5400 3200 60  0001 C CNN
+	1    5400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 5AC2744C
+P 5400 4250
+F 0 "#PWR010" H 5400 4000 50  0001 C CNN
+F 1 "GND" H 5400 4100 50  0000 C CNN
+F 2 "" H 5400 4250 50  0001 C CNN
+F 3 "" H 5400 4250 50  0001 C CNN
+	1    5400 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4150 5500 4150
+Connection ~ 5400 4150
+Wire Wire Line
+	5400 4150 5400 4250
+Text HLabel 3800 3400 0    60   Input ~ 0
+SDA
+Text HLabel 3800 3500 0    60   Input ~ 0
+SCL
+Text HLabel 3800 3600 0    60   Input ~ 0
+INT
+Wire Wire Line
+	3800 3400 4650 3400
+Wire Wire Line
+	3800 3500 4650 3500
+Wire Wire Line
+	3800 3600 4650 3600
+$Comp
+L LED D1
+U 1 1 5AC274F4
+P 3100 3250
+F 0 "D1" H 3100 3350 50  0000 C CNN
+F 1 "LED" H 3100 3150 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 3100 3250 50  0001 C CNN
+F 3 "" H 3100 3250 50  0001 C CNN
+	1    3100 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5AC2755F
+P 3500 3050
+F 0 "D2" H 3500 3150 50  0000 C CNN
+F 1 "LED" H 3500 2950 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 3500 3050 50  0001 C CNN
+F 3 "" H 3500 3050 50  0001 C CNN
+	1    3500 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 3250 4650 3250
+Wire Wire Line
+	4050 3150 4650 3150
+$Comp
+L R R2
+U 1 1 5AC277A4
+P 3900 3050
+F 0 "R2" V 3980 3050 50  0000 C CNN
+F 1 "2.2k" V 3900 3050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3830 3050 50  0001 C CNN
+F 3 "" H 3900 3050 50  0001 C CNN
+	1    3900 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3050 3650 3050
+$Comp
+L R R1
+U 1 1 5AC277EA
+P 3600 3250
+F 0 "R1" V 3680 3250 50  0000 C CNN
+F 1 "2.2k" V 3600 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3530 3250 50  0001 C CNN
+F 3 "" H 3600 3250 50  0001 C CNN
+	1    3600 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 3250 3450 3250
+Text HLabel 6350 3200 2    60   Output ~ 0
+SYS
+Wire Wire Line
+	6150 3050 6150 3150
+Connection ~ 6150 3050
+$Comp
+L C C4
+U 1 1 5AC27CEA
+P 6600 2900
+F 0 "C4" H 6625 3000 50  0000 L CNN
+F 1 "4.7uF" H 6625 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6638 2750 50  0001 C CNN
+F 3 "" H 6600 2900 50  0001 C CNN
+	1    6600 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 5AC27D69
+P 6750 2900
+F 0 "#PWR011" H 6750 2650 50  0001 C CNN
+F 1 "GND" H 6750 2750 50  0000 C CNN
+F 2 "" H 6750 2900 50  0001 C CNN
+F 3 "" H 6750 2900 50  0001 C CNN
+	1    6750 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 5AC27EAB
+P 6400 2700
+F 0 "C3" H 6425 2800 50  0000 L CNN
+F 1 "47nF" H 6425 2600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6438 2550 50  0001 C CNN
+F 3 "" H 6400 2700 50  0001 C CNN
+	1    6400 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 2750 6150 2700
+Wire Wire Line
+	6150 2700 6250 2700
+Wire Wire Line
+	6150 2600 6200 2600
+Wire Wire Line
+	6200 2600 6200 2500
+Wire Wire Line
+	6150 2500 6600 2500
+Wire Wire Line
+	6550 2500 6550 2700
+Connection ~ 6200 2500
+$Comp
+L C C5
+U 1 1 5AC27FA3
+P 7000 2650
+F 0 "C5" H 7025 2750 50  0000 L CNN
+F 1 "10uF" H 7025 2550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7038 2500 50  0001 C CNN
+F 3 "" H 7000 2650 50  0001 C CNN
+	1    7000 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L L L1
+U 1 1 5AC28007
+P 6750 2500
+F 0 "L1" V 6700 2500 50  0000 C CNN
+F 1 "1uH" V 6825 2500 50  0000 C CNN
+F 2 "EATON_Inductors:DR73" H 6750 2500 50  0001 C CNN
+F 3 "http://www.cooperindustries.com/content/dam/public/bussmann/Electronics/Resources/product-datasheets/Bus_Elx_DS_4315_DR_Series.pdf" H 6750 2500 50  0001 C CNN
+	1    6750 2500
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6550 2500
+Wire Wire Line
+	6900 2500 7500 2500
+Text HLabel 7500 2500 2    60   Output ~ 0
+SYS
+Connection ~ 7000 2500
+$Comp
+L GND #PWR012
+U 1 1 5AC28181
+P 7000 2800
+F 0 "#PWR012" H 7000 2550 50  0001 C CNN
+F 1 "GND" H 7000 2650 50  0000 C CNN
+F 2 "" H 7000 2800 50  0001 C CNN
+F 3 "" H 7000 2800 50  0001 C CNN
+	1    7000 2800
+	1    0    0    -1  
+$EndComp
+Text HLabel 6650 3350 2    60   Input ~ 0
+BAT
+Wire Wire Line
+	6150 3450 6200 3450
+Wire Wire Line
+	6200 3450 6200 3350
+Wire Wire Line
+	6150 3350 6650 3350
+Connection ~ 6200 3350
+Text HLabel 6400 3850 2    60   Input ~ 0
+WAKE
+Wire Wire Line
+	6150 3850 6400 3850
+$Comp
+L C C2
+U 1 1 5AC2887B
+P 4400 2900
+F 0 "C2" H 4425 3000 50  0000 L CNN
+F 1 "10uF" H 4425 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4438 2750 50  0001 C CNN
+F 3 "" H 4400 2900 50  0001 C CNN
+	1    4400 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 5AC2892D
+P 4200 2900
+F 0 "#PWR013" H 4200 2650 50  0001 C CNN
+F 1 "GND" H 4200 2750 50  0000 C CNN
+F 2 "" H 4200 2900 50  0001 C CNN
+F 3 "" H 4200 2900 50  0001 C CNN
+	1    4200 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 2900 4250 2900
+Wire Wire Line
+	4550 2900 4650 2900
+Text HLabel 2650 3250 0    60   Input ~ 0
+SYS
+Wire Wire Line
+	2650 3250 2950 3250
+Text HLabel 2650 3050 0    60   Input ~ 0
+SYS
+Wire Wire Line
+	2650 3050 3350 3050
+Wire Wire Line
+	4050 3050 4050 3150
+$Comp
+L C C6
+U 1 1 5AC29570
+P 7300 2650
+F 0 "C6" H 7325 2750 50  0000 L CNN
+F 1 "1uF" H 7325 2550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7338 2500 50  0001 C CNN
+F 3 "" H 7300 2650 50  0001 C CNN
+	1    7300 2650
+	-1   0    0    1   
+$EndComp
+Connection ~ 7300 2500
+$Comp
+L GND #PWR014
+U 1 1 5AC295CD
+P 7300 2800
+F 0 "#PWR014" H 7300 2550 50  0001 C CNN
+F 1 "GND" H 7300 2650 50  0000 C CNN
+F 2 "" H 7300 2800 50  0001 C CNN
+F 3 "" H 7300 2800 50  0001 C CNN
+	1    7300 2800
+	1    0    0    -1  
+$EndComp
+Text HLabel 3800 3700 0    60   Input ~ 0
+CE
+Wire Wire Line
+	3800 3700 4650 3700
+Wire Wire Line
+	4650 2700 4550 2700
+Wire Wire Line
+	4550 2700 4550 2550
+Wire Wire Line
+	3750 2550 4650 2550
+$Comp
+L C C1
+U 1 1 5AC2A5A0
+P 4000 2400
+F 0 "C1" H 4025 2500 50  0000 L CNN
+F 1 "10uF" H 4025 2300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4038 2250 50  0001 C CNN
+F 3 "" H 4000 2400 50  0001 C CNN
+	1    4000 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 2550
+Text HLabel 3750 2550 0    60   Input ~ 0
+VIN
+Connection ~ 4000 2550
+$Comp
+L GND #PWR015
+U 1 1 5AC2AA30
+P 4000 2250
+F 0 "#PWR015" H 4000 2000 50  0001 C CNN
+F 1 "GND" H 4000 2100 50  0000 C CNN
+F 2 "" H 4000 2250 50  0001 C CNN
+F 3 "" H 4000 2250 50  0001 C CNN
+	1    4000 2250
+	-1   0    0    1   
+$EndComp
+Text Notes 4850 2250 0    79   ~ 16
+BATTERY CHARGER
+$Comp
+L Thermistor TH1
+U 1 1 5AC53FA3
+P 7650 3700
+F 0 "TH1" V 7750 3750 50  0000 C CNN
+F 1 "10k" V 7550 3700 50  0000 C BNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7650 3700 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/murata-electronics-north-america/NXFT15XH103FA2B050/490-5629-ND/2533820" H 7650 3700 50  0001 C CNN
+	1    7650 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 3700 7450 3700
+$Comp
+L R R3
+U 1 1 5AC540B2
+P 7250 3500
+F 0 "R3" V 7330 3500 50  0000 C CNN
+F 1 "5.23k" V 7250 3500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7180 3500 50  0001 C CNN
+F 3 "" H 7250 3500 50  0001 C CNN
+	1    7250 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R4
+U 1 1 5AC54110
+P 7250 3900
+F 0 "R4" V 7330 3900 50  0000 C CNN
+F 1 "30.1k" V 7250 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7180 3900 50  0001 C CNN
+F 3 "" H 7250 3900 50  0001 C CNN
+	1    7250 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 3650 7250 3750
+Connection ~ 7250 3700
+$Comp
+L GND #PWR016
+U 1 1 5AC5420C
+P 7250 4100
+F 0 "#PWR016" H 7250 3850 50  0001 C CNN
+F 1 "GND" H 7250 3950 50  0000 C CNN
+F 2 "" H 7250 4100 50  0001 C CNN
+F 3 "" H 7250 4100 50  0001 C CNN
+	1    7250 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4100 7250 4050
+Wire Wire Line
+	6150 3050 6250 3050
+Wire Wire Line
+	6250 3050 6250 3200
+Wire Wire Line
+	6250 3200 6350 3200
+Wire Wire Line
+	6150 2900 6450 2900
+Wire Wire Line
+	6350 2900 6350 3100
+Wire Wire Line
+	6350 3100 7250 3100
+Wire Wire Line
+	7250 3100 7250 3350
+Connection ~ 6350 2900
+$Comp
+L GND #PWR017
+U 1 1 5AC54548
+P 8000 3700
+F 0 "#PWR017" H 8000 3450 50  0001 C CNN
+F 1 "GND" H 8000 3550 50  0000 C CNN
+F 2 "" H 8000 3700 50  0001 C CNN
+F 3 "" H 8000 3700 50  0001 C CNN
+	1    8000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3700 8000 3700
+$Comp
+L GND #PWR018
+U 1 1 5AC54C92
+P 4500 3900
+F 0 "#PWR018" H 4500 3650 50  0001 C CNN
+F 1 "GND" H 4500 3750 50  0000 C CNN
+F 2 "" H 4500 3900 50  0001 C CNN
+F 3 "" H 4500 3900 50  0001 C CNN
+	1    4500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3900 4650 3900
+$EndSCHEMATC

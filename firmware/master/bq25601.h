@@ -16,9 +16,9 @@
 #define WD_RST				6
 #define OTG_CONFIG			5
 #define CHG_CONFIG			4
-#define SYS_Min_2			3
-#define SYS_Min_1			2
-#define SYS_Min_0			1
+#define SYS_MIN_2			3
+#define SYS_MIN_1			2
+#define SYS_MIN_0			1
 #define Min_Vbat_SEL		0
 
 
